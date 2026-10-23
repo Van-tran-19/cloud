@@ -15,19 +15,19 @@ and the free-tier safety rules.
 
 ## Tasks
 
-- [ ] **1. Create a GCP project.**
+- [x] **1. Create a GCP project.**
   _Taught in: Fundamentals M2 — Resources and Access in the Cloud._
   Sign in at <https://console.cloud.google.com>, create a new project (note its
   **project id** — you will need it). Set a **Cloud Budget alert at €0.01** so you are
   emailed if anything ever bills. (If your $300 free trial has ended, you must have an
   **active/upgraded billing account** for Always Free to apply.)
 
-- [ ] **2. Create your public GitHub repo from the course template.**
+- [x] **2. Create your public GitHub repo from the course template.**
   On the course template repo, click **"Use this template" → Create a new repository** and
   make it **public** (or set Settings → General → Danger Zone → Change visibility to Public
   afterward).
 
-- [ ] **3. Open Cloud Shell and clone your repo.**
+- [x] **3. Open Cloud Shell and clone your repo.**
   Open **Cloud Shell** (`>_` icon in the Console, or <https://shell.cloud.google.com>), then
   click **Open Editor** for the IDE. Clone your repo and `cd` into it:
   ```bash

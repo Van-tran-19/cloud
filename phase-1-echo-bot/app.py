@@ -21,12 +21,7 @@ app = Flask(__name__)
 # Functions YOU implement (pure — no Flask needed; unit-tested offline)
 # --------------------------------------------------------------------------- #
 def build_echo(message: str) -> dict:
-    """Return the echo payload for ``message``.
-
-    Must return exactly ``{"echo": <message>, "length": <len of message>}``.
-    """
-    # TODO: return {"echo": message, "length": len(message)}
-    raise NotImplementedError("Phase 1: implement build_echo()")
+    return {"echo": message, "length": len(message)}
 
 
 def extract_message(args, json_body) -> str | None:
@@ -41,7 +36,10 @@ def extract_message(args, json_body) -> str | None:
     """
     # TODO: return args["msg"] if present, else json_body["message"] if present,
     #       else None. Use .get() so missing keys don't raise.
-    raise NotImplementedError("Phase 1: implement extract_message()")
+    if args.get("msg") is not None or json_body != None and json_body.get("message") is not None:
+        return args.get("msg") or json_body.get("message")
+    else: 
+        return None
 
 
 # --------------------------------------------------------------------------- #
